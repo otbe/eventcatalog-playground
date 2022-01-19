@@ -1,7 +1,7 @@
 {
-  "$id": "https://example.com/OrderRequested.json",
+  "$id": "https://example.com/AddedItemToCart.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "OrderRequested",
+  "title": "AddedItemToCart",
   "type": "object",
   "properties": {
     "metadata": {
@@ -20,7 +20,7 @@
           "description": "The name of the service that triggered the event"
         }
       },
-      "required": ["correlationId", "domain", "service"]
+      "required": ["correlationId", "domain"]
     },
     "data": {
       "type": "object",
@@ -29,9 +29,16 @@
           "type": "string",
           "description": "The ID of the user"
         },
-        "orderId": {
+        "itemId": {
           "type": "string",
-          "description": "The ID the users order"
+          "description": "The ID of the shopping item"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "How many items the user wants to add to their shopping cart",
+          "minimum": 1,
+          "maximum": 1000,
+          "default": 1
         }
       }
     }

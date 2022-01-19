@@ -1,9 +1,9 @@
 ---
-name: Basket Service
+name: my-service
 summary: |
   CRUD based API to handle Basket interactions for users of the shopping website.
 owners:
-    - dboyne
+  - dboyne
 repository:
   language: JavaScript
   url: https://github.com/boyney123/pretend-basket-service
