@@ -1,12 +1,12 @@
 ---
-name: eventA
+name: eventWithVeryLongNameDunnoWhyThisIsSoLong
 version: 0.0.2
 summary: |
   Holds information about what the user added to their shopping cart.
 producers:
-  - my-service
+  - my-service-long
 consumers:
-  - my-service
+  - my-service-long
 domains:
   - Shop
 owners:
@@ -24,7 +24,7 @@ We have a frontend application that allows users to buy things from our store. T
 
 ### Consumer / Producer Diagram
 
-<Mermaid />
+<NodeGraph/>
 
 <EventExamples title="How to trigger event" />
 
